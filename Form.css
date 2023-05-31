@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
@@ -7,7 +13,6 @@ a {
 body {
     color: white;
     font-family: sans-serif;
-    margin: 0;
     background-color: #23242a;
 }
 
@@ -15,45 +20,26 @@ button {
     cursor: pointer;
 }
 
-footer {
-    background-color: #006064;
-    border-radius: 5px;
-    height: 40px;
-    margin-top: 11px;
-}
-
 h1 {
-    margin: 0px 15px;
+    margin: 0;
     font-family: 'Sacramento', cursive;
     font-size: 400%;
-}
-
-h3 {
-    margin: 0px;
-    text-align: center;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 15px;
 }
 
 nav {
     display: flex;
     margin-right: 100px;
-    /* background-color: red; */
 }
 
 nav a {
     color: white;
-    text-decoration: none;
-}
-
-nav li {
-    margin: 0;
-    padding: 20px;
-    position: relative;
 }
 
 nav ul {
@@ -61,12 +47,12 @@ nav ul {
     list-style: none;
 }
 
-p {
-    display: block;
+nav li {
+    padding: 20px;
 }
 
-td {
-    padding-right: 50px;
+p {
+    margin: 0;
 }
 
 .about-container {
@@ -83,109 +69,6 @@ td {
 
 .containers {
     display: flex;
-    margin-bottom: 0px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #2a2f3b;
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-.dropdown-content li {
-    margin: 0;
-    padding: 15px;
-}
-
-.dropdown:hover .dropdown-content {
-    margin-top: 20px;
-    display: block;
-}
-
-.forumparagraph {
-    font-size: 24px;
-    margin-top: 0;
-    margin-left: 30px;
-}
-
-.fa-bell {
-    color: lightblue;
-}
-
-.fa-bookmark {
-    color: rgb(197, 44, 44);
-}
-
-.fa-camera {
-    padding: 5px;
-    font-size: 10px;
-    width: 30px;
-    text-align: center;
-    background: skyblue;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border-top-left-radius: 10px;
-}
-
-.fa-cog {
-    color: grey;
-}
-
-.fa-facebook {
-    padding: 5px;
-    font-size: 10px;
-    width: 20px;
-    text-align: center;
-    background: #3B5998;
-}
-
-.fa-github {
-    padding: 5px;
-    font-size: 10px;
-    width: 20px;
-    text-align: center;
-    background: #171515;
-}
-
-.fa-linkedin {
-    padding: 5px;
-    font-size: 10px;
-    width: 20px;
-    text-align: center;
-    background: #007bb5;
-}
-
-.fa-plus {
-    font-size: 24px;
-}
-
-.fa-reddit {
-    padding: 5px;
-    font-size: 10px;
-    width: 20px;
-    text-align: center;
-    background: #ff5700;
-}
-
-.fa-sign-out {
-    color: white;
-}
-
-.fa-twitter {
-    padding: 5px;
-    font-size: 10px;
-    width: 20px;
-    text-align: center;
-    background: #55ACEE;
-}
-
-
-.fa-user {
-    color: black;
 }
 
 .followed-forums {
@@ -194,13 +77,6 @@ td {
     margin-top: 20px;
     padding: 10px;
     width: 400px;
-}
-
-.footer-tag {
-    color: black;
-    margin-left: 20px;
-    margin-top: 10px;
-    position: absolute;
 }
 
 .h-forumium {
@@ -215,13 +91,7 @@ td {
 
 .icon-container i {
     font-size: 28px;
-
 }
-
-/* .left-containers {
-    display: flex;
-    flex-direction: column;
-} */
 
 .login-container {
     border-radius: 5px;
@@ -240,16 +110,16 @@ td {
     width: 1500px;
     margin-left: 20px;
     padding: 10px;
-    /* z-index: 999; */
 }
 
-.nav-content li:hover {
-    background-color: #459b81;
-}
-
-.p-disussion {
-    font-size: 28px;
-    margin: 0px;
+.p-sign-in {
+    background-color: rgb(16, 122, 126);
+    border-radius: 5px 0 0 0;
+    font-family: 'sans-serif';
+    font-size: 22px;
+    margin-top: 0;
+    padding: 10px;
+    text-align: center;
 }
 
 .profile-preview {
@@ -261,21 +131,15 @@ td {
     margin-bottom: 50px;
 }
 
-.p-sign-in {
-    background-color: rgb(16, 122, 126);
-    border-radius: 5px 0px 0px;
-    font-family: 'sans-serif';
-    font-size: 22px;
-    margin-top: 0px;
-    padding: 10px;
-    text-align: center;
+.span-forgot,
+.span-register {
+    color: #0f1953;
 }
 
-.sidebar {
-    height: 500px;
-    width: 400px;
-    padding: 10px;
-    background-color: rgb(71, 68, 68);
+.span-forgot:hover,
+.span-register:hover {
+    color: #459b81;
+    text-decoration: underline;
 }
 
 .signUp-container {
@@ -284,31 +148,6 @@ td {
     background-color: rgb(71, 68, 68);
     height: 800px;
     width: 900px;
-}
-
-.social-containers {
-    margin-left: 1600px;
-    margin-top: 10px;
-    position: absolute;
-}
-
-.span-forgot {
-    color: #0f1953;
-    margin-left: 190px;
-}
-
-.span-forgot:hover {
-    color: #459b81;
-    text-decoration: underline;
-}
-
-.span-register {
-    color: #0f1953;
-}
-
-.span-register:hover {
-    color: #459b81;
-    text-decoration: underline;
 }
 
 .submit {
@@ -327,35 +166,3 @@ td {
     height: 40px;
     width: 450px;
 }
-
-.userID {
-    /* color: black; */
-    margin: 0;
-}
-
-.user-input {
-    padding: 20px;
-}
-
-.user-input-rightcon {
-    margin-left: 500px;
-    position: absolute;
-    /* background-color: #006064; */
-    width: 350px;
-    height: 520px;
-}
-
-.userName {
-    color: #459b81;
-    font-size: 26px;
-    margin: 10px 10px 0px;
-}
-
-.userPhoto {
-    height: 250px;
-    margin-left: 60px;
-}
-
-/* .signIn, .signUp {
-    font-weight: bold;
-} */
