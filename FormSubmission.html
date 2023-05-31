@@ -3,55 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form (Assignment_1)</title>
-    <link rel="stylesheet" href="form.css">
+    <title>Register</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <h2>Registration</h2>
-    <form>
-        <!-- First Name Field -->
-        <label for="fname">First Name:</label>
-        <input type="Name" id="fname",><br><br>
-        <!-- Last Name Field -->
-        <label for="lname">Last Name:</label>
-        <input type="Name" id="lname"><br><br>
-        <!-- User Name Field -->
-        <label for="uname">Username:</label>
-        <input type="Name" id="uname"><br><br>
-        <!-- Phone Number Field -->
-        <label for="pnumber">Phone Number:</label>
-        <input type="tel" id="pnumber"><br><br>
-        <!-- Date of Birth Field -->
-        <label for="age">Date of Birth:</label>
-        <input type="date" id="age"><br><br>
-        <!-- Gender Field -->
-        <label for="gender">Gender:</label>
-        <input type="radio" id="male" name="Gender">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="Gender">
-        <label for="female">Female</label><br><br>
-        <!-- Occupation Field -->
-        <label>Occupation:</label>
-        <select name="occupation" id="occupation">
-            <option value="Student"></option>
-            <option value="Student">Student</option>
-            <option value="Student">Job</option>
-            <option value="Student">Retired</option>
-            <option value="Student">Unemployed</option>
-        </select><br><br>
-        <!-- Email Field -->
-        <label for="email">Email:</label>
-        <input type="email" id="email",><br><br>
-        <!-- Password Field -->
-        <label for="password">Password:</label>
-        <input type="password" id="password",><br><br>
-        <!-- Confirm Field -->
-        <label for="cpassword">Confirm Password:</label>
-        <input type="password" id="password",><br><br>
-        <input type="submit" id="password",><br><br>
-    </form>
+    <h1 class="h-forumium">Welcome To</h1>
+    <h1 class="h-forumium">Forumium</h1>
+    <div class="signUp-container">
+        <p class="p-sign-in">Create An Account</p>
+        <div class="user-input">
+            <form action="registerAction.php" method="POST">
+                <div class="user-input-rightcon">
+                    <div class="profile-preview">
+                        <a href=""><i class="fa fa-camera" title="Facebook"></i></a>
+                    </div>
+                    <span class="p-gender">Gender:</span>
+                    <input type="radio" name="gender"
+                        onchange="document.getElementsByName('r_selectedGender')[0].value = this.value" value="Male">
+                    <span>Male</span>
+                    <input type="radio" name="gender"
+                        onchange="document.getElementsByName('r_selectedGender')[0].value = this.value" value="Female">
+                    <span>Female</span>
+                    <input type="hidden" name="r_selectedGender">
+                    <p>Phone Number:</p>
+                    <input type="text" name="r_phoneNumber" class="usrfield" style="width: 350px">
+                </div>
+                <p>Full Name:</p>
+                <input type="text" class="usrfield" name="r_fullName">
+                <p>Username:</p>
+                <input type="text" class="usrfield" name="r_userName">
+                <p>Email:</p>
+                <input type="email" class="usrfield" name="r_email">
+                <p>Date of Birth:</p>
+                <input type="text" class="usrfield" name="r_dob">
+                <p>Password: </p>
+                <input type="password" class="usrfield" name="r_pass"> <br>
+                <p>Confirm Password: </p>
+                <input type="password" class="usrfield" name="r_conPass"> <br>
+
+                <button type="submit" class="submit" name="submit">Register</button>
+                <span>Already Have An Account?</span>
+                <span><a class="span-register" href="login.php">Sign In</a></span>
+            </form>
+
+        </div>
+    </div>
 </body>
 
 </html>
